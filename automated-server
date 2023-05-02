@@ -1,0 +1,10 @@
+#Automated Server Setup Script: Write a bash script that automatically installs and configures all the necessary software and tools on a fresh server, such as Apache, MySQL, PHP, and Git.
+
+#!/bin/bash
+sudo apt-get update
+sudo apt-get install apache2 mysql-server php git -y
+sudo systemctl enable apache2
+sudo systemctl enable mysql
+sudo systemctl start apache2
+sudo systemctl start mysql
+

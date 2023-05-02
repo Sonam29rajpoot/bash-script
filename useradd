@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# useradd
+read -p "enter user name:" username
+useradd -m $username
+passwd $username
+echo "user $username has been created"

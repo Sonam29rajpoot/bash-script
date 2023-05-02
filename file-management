@@ -1,0 +1,17 @@
+#File Management System:
+#Project: Write a script that can create, delete, copy and move files and directories. The script should accept user input to perform the desired file management operation.
+
+#!/bin/bash
+echo "1. Create file"
+echo "2. Delete file"
+echo "3. copy file"
+echo "4. move file"
+echo "Enter choice:"
+read choice
+case $choice in
+ 1) echo "enter file name to create"; read filename; touch $filename;;
+ 2) echo "enter file name to delete"; read filename; rm -f $filename;;
+ 3) echo "enter file name to copy file from source to destination"; read src dest; cp $src $dest;;
+ 4) echo "enter file name to move from source to destination"; read src dest; mv $src $dest;;
+ *) echo "invalid choice";;
+esac
